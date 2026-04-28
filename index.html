@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CARHive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="logo.png" alt="CARHive Logo" class="logo-img" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#cars">Rent Car</a></li>
+        <li><a href="#why">About Us</a></li>
+        <li><a href="#attractions">Attractions</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <p class="hero-tag">Best Car Rental in Prayagraj</p>
+      <h1>Easy And Fast Way<br/>To <span>Rent</span> Your <span>Self Drive</span> Car</h1>
+      <p class="hero-desc">We Offer A Wide Range Of Rental Cars To Suit Your Needs. Whether You're Planning A Weekend Getaway, A Business Trip.</p>
+      <a href="#booking" class="btn-hero">Rent Car <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-right">
+      <img src="aura.avif" alt="Hero Car" class="hero-car-img" />
+      <div class="hero-blob"></div>
+    </div>
+  </section>
+
+  <!-- LATEST INVENTORY -->
+  <section class="inventory" id="cars">
+    <div class="section-header">
+      <h2>Latest <span>Inventory</span></h2>
+      <p>Experience The Future Of Automotive Innovation With Our Latest Car Models</p>
+    </div>
+    <div class="cars-grid">
+      <div class="car-card"><div class="car-img-wrap"><img src="alto.avif" alt="Maruti Alto" data-car="alto"/></div><div class="car-details"><h4>Maruti Alto</h4><div class="stars">★★★★☆ <span>32 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="celerio.png" alt="Maruti Celerio" data-car="celerio"/></div><div class="car-details"><h4>Maruti Celerio</h4><div class="stars">★★★★☆ <span>28 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,800 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="tiago.jpg" alt="Tata Tiago" data-car="tiago"/></div><div class="car-details"><h4>Tata Tiago</h4><div class="stars">★★★★☆ <span>41 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,800 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="tigor.avif" alt="Tata Tigor" data-car="tigor"/></div><div class="car-details"><h4>Tata Tigor</h4><div class="stars">★★★★☆ <span>35 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,800 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="wagonr.avif" alt="Maruti WagonR" data-car="wagonr"/></div><div class="car-details"><h4>Maruti WagonR</h4><div class="stars">★★★★☆ <span>55 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,700 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="baleno.avif" alt="Maruti Baleno" data-car="baleno"/></div><div class="car-details"><h4>Maruti Baleno</h4><div class="stars">★★★★★ <span>62 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="swift.jpg" alt="Swift Dzire" data-car="dzire"/></div><div class="car-details"><h4>Maruti Swift Dzire</h4><div class="stars">★★★★★ <span>48 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹1,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="i20.jpg" alt="Hyundai i20" data-car="i20"/></div><div class="car-details"><h4>Hyundai i20</h4><div class="stars">★★★★★ <span>47 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,299 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="fronx.avif" alt="Maruti Fronx" data-car="fronx"/></div><div class="car-details"><h4>Maruti Fronx</h4><div class="stars">★★★★★ <span>38 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="punch.avif" alt="Tata Punch" data-car="punch"/></div><div class="car-details"><h4>Tata Punch</h4><div class="stars">★★★★★ <span>53 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="nexon.jpg" alt="Tata Nexon" data-car="nexon"/></div><div class="car-details"><h4>Tata Nexon</h4><div class="stars">★★★★★ <span>71 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="aura.avif" alt="Hyundai Aura" data-car="aura"/></div><div class="car-details"><h4>Hyundai Aura</h4><div class="stars">★★★★★ <span>36 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="amaze.webp" alt="Honda Amaze" data-car="amaze"/></div><div class="car-details"><h4>Honda Amaze</h4><div class="stars">★★★★☆ <span>52 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="brezza.avif" alt="Maruti Brezza" data-car="brezza"/></div><div class="car-details"><h4>Maruti Brezza</h4><div class="stars">★★★★★ <span>66 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="ertiga.avif" alt="Maruti Ertiga" data-car="ertiga"/></div><div class="car-details"><h4>Maruti Ertiga</h4><div class="stars">★★★★★ <span>44 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 7 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹2,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="sonet.avif" alt="Kia Sonet" data-car="sonet"/></div><div class="car-details"><h4>Kia Sonet</h4><div class="stars">★★★★★ <span>58 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹3,499 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card"><div class="car-img-wrap"><img src="venue.avif" alt="Hyundai Venue" data-car="venue"/></div><div class="car-details"><h4>Hyundai Venue</h4><div class="stars">★★★★★ <span>49 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹3,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="creta.jpg" alt="Hyundai Creta" data-car="creta"/></div><div class="car-details"><h4>Hyundai Creta</h4><div class="stars">★★★★★ <span>88 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹3,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="verna.avif" alt="Hyundai Verna" data-car="verna"/></div><div class="car-details"><h4>Hyundai Verna</h4><div class="stars">★★★★★ <span>61 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹3,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="xuv300.avif" alt="Mahindra XUV300" data-car="xuv300"/></div><div class="car-details"><h4>Mahindra XUV-300</h4><div class="stars">★★★★☆ <span>43 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹3,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="thar.webp" alt="Mahindra Thar" data-car="thar"/></div><div class="car-details"><h4>Mahindra Thar</h4><div class="stars">★★★★★ <span>76 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 4 Seat</span><span><i class="fas fa-gas-pump"></i> Diesel</span><span><i class="fas fa-door-open"></i> 2 Door</span></div><div class="car-footer"><div class="car-price">₹4,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="scorpio.avif" alt="Scorpio 11" data-car="scorpio11"/></div><div class="car-details"><h4>Mahindra Scorpio-11</h4><div class="stars">★★★★☆ <span>39 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 7 Seat</span><span><i class="fas fa-gas-pump"></i> Diesel</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹4,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="scorpio n.jpg" alt="Scorpio N" data-car="scorpion"/></div><div class="car-details"><h4>Mahindra Scorpio-N</h4><div class="stars">★★★★★ <span>67 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 7 Seat</span><span><i class="fas fa-gas-pump"></i> Diesel</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹5,999 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="endeavour.webp" alt="Ford Endeavour" data-car="endeavour"/></div><div class="car-details"><h4>Ford Endeavour</h4><div class="stars">★★★★★ <span>29 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 7 Seat</span><span><i class="fas fa-gas-pump"></i> Diesel</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹12,000 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="fortuner.avif" alt="Toyota Fortuner" data-car="fortuner"/></div><div class="car-details"><h4>Toyota Fortuner</h4><div class="stars">★★★★★ <span>92 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 7 Seat</span><span><i class="fas fa-gas-pump"></i> Diesel</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹12,000 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="audi.jpg" alt="Audi" data-car="audi"/></div><div class="car-details"><h4>Audi</h4><div class="stars">★★★★★ <span>21 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹15,000 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+      <div class="car-card luxury"><div class="car-img-wrap"><img src="bmw.avif" alt="BMW" data-car="bmw"/></div><div class="car-details"><h4>BMW</h4><div class="stars">★★★★★ <span>18 Reviews</span></div><div class="car-specs"><span><i class="fas fa-chair"></i> 5 Seat</span><span><i class="fas fa-gas-pump"></i> Petrol</span><span><i class="fas fa-door-open"></i> 4 Door</span></div><div class="car-footer"><div class="car-price">₹15,000 <small>/Day</small></div><a href="#booking" class="btn-rent" onclick="return selectCar(this)">Rent Car</a></div></div></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section" id="why">
+    <div class="why-left">
+      <div class="section-header left-align">
+        <h2>Why <span>Choose</span> Us</h2>
+        <p>We Stand As Your Trusted Partner. Our Dedication To Quality, Innovation, And Customer Satisfaction Sets Us Apart.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon"><i class="fas fa-headset"></i></div><div><h4>24/7 Support</h4><p>Our team is available round-the-clock to assist you anytime.</p></div></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-tag"></i></div><div><h4>Best Price</h4><p>Competitive and transparent pricing with no hidden charges.</p></div></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-id-card"></i></div><div><h4>Verified License</h4><p>All vehicles are fully verified, insured, and legally compliant.</p></div></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-times-circle"></i></div><div><h4>Free Cancellation</h4><p>Flexible booking with easy and free cancellation options.</p></div></div>
+      </div>
+    </div>
+    <div class="why-right">
+      <img src="amaze.webp" alt="Why Choose Us Car" />
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements">
+    <div class="section-header">
+      <h2>Our <span>Achievement</span></h2>
+      <p>Our Journey Of Success Is A Testament To The Collective Efforts And Determination Of Our Team.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card"><h3>650+</h3><p>Happy Customers</p></div>
+      <div class="stat-card"><h3>26+</h3><p>Cars Available</p></div>
+      <div class="stat-card"><h3>1+</h3><p>Years Experience</p></div>
+      <div class="stat-card"><h3>100+</h3><p>Destinations Covered</p></div>
+    </div>
+  </section>
+
+  <!-- ATTRACTIONS -->
+  <section class="attractions-section" id="attractions">
+    <div class="section-header">
+      <h2>Prayagraj <span>Attractions</span></h2>
+      <p>Discover the spiritual and historical wonders of Sangam City</p>
+    </div>
+    <div class="attractions-grid">
+      <div class="attr-card"><div class="attr-icon-wrap">🕉️</div><h4>Triveni Sangam</h4><p>Sacred confluence of Ganga, Yamuna & Saraswati rivers.</p><a href="https://maps.app.goo.gl/4Lmy5Wee77uQqy1h6"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> City Center</span></a></div>
+      <div class="attr-card"><div class="attr-icon-wrap">🏰</div><h4>Allahabad Fort</h4><p>Magnificent Mughal-era fort built by Emperor Akbar in 1583.</p><a href="https://share.google/w7OfeKODgxvdNlwVU"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> 3 km from center</span></a></div>
+      <div class="attr-card"><div class="attr-icon-wrap">🌿</div><h4>Anand Bhavan</h4><p>Historic residence of the Nehru-Gandhi family, now a museum.</p><a href="https://maps.app.goo.gl/t6SMEgEpXSTQGHC68"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> 2 km from center</span></a></div>
+      <div class="attr-card"><div class="attr-icon-wrap">🛕</div><h4>Mankameshwar Temple</h4><p>Ancient Shiva temple on the banks of Yamuna river.</p><a href="https://maps.app.goo.gl/tu952UNXL5AhQ4Ju8"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> 1.5 km from center</span></a></div>
+      <div class="attr-card"><div class="attr-icon-wrap">🌸</div><h4>Khusro Bagh</h4><p>Beautiful Mughal garden with stunning sandstone tombs.</p><a href="https://maps.app.goo.gl/i3QupNgk55pGcsqx7"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> Near Railway Station</span></a></div>
+      <div class="attr-card"><div class="attr-icon-wrap">🎪</div><h4>Kumbh Mela Ground</h4><p>World's largest religious gathering at the Sangam banks.</p><a href="https://maps.app.goo.gl/vibDbUgprHyNDQAL8"><span class="attr-dist"><i class="fas fa-map-marker-alt"></i> Sangam Area</span></a></div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking-section" id="booking">
+    <div class="section-header">
+      <h2>Book Your <span>Car</span></h2>
+      <p>Fill in the details and we'll confirm your booking shortly</p>
+    </div>
+    <form class="booking-form" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-group"><label><i class="fas fa-user"></i> Your Name</label><input type="text" placeholder="Enter your full name" required /></div>
+        <div class="form-group"><label><i class="fas fa-phone"></i> Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" required /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label><i class="fas fa-car"></i> Select Car</label>
+          <select required>
+            <option value="">-- Choose a Car --</option>
+            <option value="alto">Maruti Alto — ₹999/day</option>
+            <option value="celerio">Maruti Celerio — ₹1,800/day</option>
+            <option value="tiago">Tata Tiago — ₹1,800/day</option>
+            <option value="tigor">Tata Tigor — ₹1,800/day</option>
+            <option value="wagonr">Maruti WagonR — ₹1,700/day</option>
+            <option value="baleno">Maruti Baleno — ₹1,999/day</option>
+            <option value="dzire">Maruti Swift Dzire — ₹1,999/day</option>
+            <option value="i20">Hyundai i20 — ₹2,299/day</option>
+            <option value="fronx">Maruti Fronx — ₹2,499/day</option>
+            <option value="punch">Tata Punch — ₹2,499/day</option>
+            <option value="nexon">Tata Nexon — ₹2,499/day</option>
+            <option value="aura">Hyundai Aura — ₹2,499/day</option>
+            <option value="amaze">Honda Amaze — ₹2,499/day</option>
+            <option value="brezza">Maruti Brezza — ₹2,999/day</option>
+            <option value="ertiga">Maruti Ertiga — ₹2,999/day</option>
+            <option value="sonet">Kia Sonet — ₹3,499/day</option>
+            <option value="venue">Hyundai Venue — ₹3,999/day</option>
+            <option value="creta">Hyundai Creta — ₹3,999/day</option>
+            <option value="xuv300">Mahindra XUV-300 — ₹3,999/day</option>
+            <option value="verna">Hyundai Verna — ₹3,999/day</option>
+            <option value="thar">Mahindra Thar — ₹4,999/day</option>
+            <option value="scorpio11">Mahindra Scorpio-11 — ₹4,999/day</option>
+            <option value="scorpion">Mahindra Scorpio-N — ₹5,999/day</option>
+            <option value="endeavour">Ford Endeavour — ₹12,000/day</option>
+            <option value="fortuner">Toyota Fortuner — ₹12,000/day</option>
+            <option value="audi">Audi — ₹15,000/day</option>
+            <option value="bmw">BMW — ₹15,000/day</option>
+          </select>
+        </div>
+        <div class="form-group"><label><i class="fas fa-map-marker-alt"></i> Pickup Location</label><input type="text" placeholder="e.g. Prayagraj Railway Station" required /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label><i class="fas fa-calendar"></i> Pickup Date</label><input type="date" required /></div>
+        <div class="form-group"><label><i class="fas fa-calendar-check"></i> Return Date</label><input type="date" required /></div>
+      </div>
+      <button type="submit" class="btn-book-full">Confirm Booking <i class="fas fa-check"></i></button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <i class="fas fa-check-circle"></i> Booking confirmed! We'll call you shortly to confirm your ride.
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <h2>Contact <span>Us</span></h2>
+      <p>We're here to help you 24/7</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card"><i class="fas fa-phone-alt"></i><h4>Phone</h4><p>+91 80047 86174</p><p>+91 97215 01698</p></div>
+      <div class="contact-card"><i class="fas fa-envelope"></i><h4>Email</h4><p>carhive27@gmail.com</p></div>
+      <div class="contact-card"><i class="fas fa-map-marker-alt"></i><h4>Address</h4><p>Jhunsi, Prayagraj,<br/>Uttar Pradesh - 211019</p></div>
+      <div class="contact-card"><i class="fas fa-clock"></i><h4>Working Hours</h4><p>24/7 support you can rely on</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="logo.png" alt="CARHive Logo" class="footer-logo-img" /></div>
+      <div class="footer-socials">
+        <a href="https://wa.me/918858310507" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/carhive_selfdrive/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+      <p>© 2026 Car Hive · Jhunsi, Prayagraj, Uttar Pradesh</p>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
