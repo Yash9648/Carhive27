@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-
 // ── HAMBURGER MENU ──
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
 }
-// Close menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
     document.getElementById('navLinks').classList.remove('open');
@@ -13,26 +10,21 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 // ── LANGUAGE TOGGLE ──
 function setLang(lang) {
-  // Update button states
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
 
-  // Translate all elements with data-en / data-hi
   document.querySelectorAll('[data-en]').forEach(el => {
     const text = el.getAttribute('data-' + lang);
     if (!text) return;
-    // Save child elements (icons) first
     const icons = [...el.querySelectorAll('i, svg')];
     el.textContent = text;
-    // Restore icons
     icons.forEach(icon => el.appendChild(icon));
   });
 
-  // Store choice
   document.documentElement.lang = lang === 'hi' ? 'hi' : 'en';
 }
 
-// ── SMOOTH SCROLL (skip .btn-rent links — handled by selectCar) ──
+// ── SMOOTH SCROLL (skip .btn-rent — handled by selectCar) ──
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   if (link.classList.contains('btn-rent')) return;
   link.addEventListener('click', e => {
@@ -57,28 +49,21 @@ window.addEventListener('scroll', () => {
 
 // ── RENT CAR → AUTO SELECT IN BOOKING FORM ──
 function selectCar(btn) {
-  // Get car name from h4 in the same card
   const carName = btn.closest('.car-card').querySelector('h4').textContent.trim();
-
-  // Find matching option by text content
   const select = document.querySelector('.booking-form select');
   for (let i = 0; i < select.options.length; i++) {
-    const optText = select.options[i].text.toLowerCase();
-    if (optText.includes(carName.toLowerCase())) {
+    if (select.options[i].text.toLowerCase().includes(carName.toLowerCase())) {
       select.selectedIndex = i;
       break;
     }
   }
-
-  // Scroll to booking section smoothly
   setTimeout(() => {
     document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 50);
-
   return false;
 }
 
-// ── GOOGLE APPS SCRIPT WEB APP URL ──
+// ── GOOGLE APPS SCRIPT URL ──
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbzE0Oi-8WsHDiY9MdyaikIKpFvO-1aYL8Xa_EOiLFQgzJb2-z1_YJ41XSRWX_aiv6Ot/exec";
 
 // ── BOOKING FORM SUBMIT ──
@@ -133,7 +118,6 @@ async function submitBooking(e) {
   btn.disabled = false;
 }
 
-// ── MIN DATE FOR DATE INPUTS ──
+// ── MIN DATE ──
 const today = new Date().toISOString().split('T')[0];
 document.querySelectorAll('input[type="date"]').forEach(i => i.setAttribute('min', today));
->>>>>>> b79ad76 (first commit)
