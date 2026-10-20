@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -28,7 +28,7 @@ img { max-width: 100%; height: auto; display: block; }
 section, footer, nav, header {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ── NAVBAR ── */
@@ -1322,4 +1322,3 @@ section, footer, nav, header {
 
   .nav-container { position: relative; }
 }
->>>>>>> b79ad76 (first commit)
